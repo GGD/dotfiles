@@ -17,15 +17,22 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-commentary'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'kana/vim-textobj-user'
+Plugin 'https://github.com/whatyouhide/vim-textobj-erb'
 Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+set ignorecase smartcase
+set autoread
+
 " numbers
 set number
 set numberwidth=4
+set relativenumber
 
 " Softtabs, 2 spaces
 set expandtab
@@ -33,9 +40,16 @@ set tabstop=2
 set shiftwidth=2
 set shiftround
 
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
 " Makr it obvious where 80 characters is
 " set textwidth=80
 " set colorcolumn=+1
+
+" Disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " theme
 syntax enable
@@ -56,8 +70,26 @@ endif
 
 let mapleader=","
 
+map <Leader>vim :source ~/.vimrc<cr>
+map <Leader>mvim :e $MYVIMRC<cr>
 map <Leader>f :CtrlP<cr>
-map <Leader>wl <C-w>l<cr>
-map <Leader>wh <C-w>h<cr>
-map <Leader>wj <C-w>j<cr>
-map <Leader>wk <C-w>k<cr>
+map <Leader>l <C-w>l<cr>
+map <Leader>h <C-w>h<cr>
+map <Leader>j <C-w>j<cr>
+map <Leader>k <C-w>k<cr>
+map <Leader>L <C-w>L<cr>
+map <Leader>H <C-w>H<cr>
+map <Leader>J <C-w>J<cr>
+map <Leader>K <C-w>K<cr>
+map <Leader>bb :!bundle install<cr>
+map <Leader>bi :source ~/.vimrc<cr>:PluginInstall<cr>
+map <Leader>d orequire'pry';binding.pry<esc>:w<cr>
+map <Leader>ed o<%=binding.pry%><esc>:w<cr>
+map <Leader>sc :w !pbcopy<cr>
+map <Leader>sp :r !pbpaste<cr>
+" RSpec.vim mappings
+map <Leader>rc :call RunCurrentSpecFile()<cr>
+map <Leader>rn :call RunNearestSpec()<cr>
+map <Leader>rl :call RunLastSpec()<cr>
+map <Leader>ra :call RunAllSpecs()<cr>
+
