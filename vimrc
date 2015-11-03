@@ -1,51 +1,30 @@
 " ========================================================================
 " Vundle stuff
 " ========================================================================
-set nocompatible  " Required by vundle
-filetype off      " Required by vundle
+set nocompatible " Required by vundle
+filetype off     " Required by vundle
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-endwise'
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'kana/vim-textobj-user'
-Plugin 'https://github.com/whatyouhide/vim-textobj-erb'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-syntax on
-colorscheme solarized
-
-
-" Disable automatic comment insertion
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
+syntax on                 " Enable syntax highlighting
 
 let mapleader=","
 
@@ -72,12 +51,14 @@ map <Leader>rn :call RunNearestSpec()<cr>
 map <Leader>rl :call RunLastSpec()<cr>
 map <Leader>ra :call RunAllSpecs()<cr>
 
-set ignorecase smartcase
-set autoread
 
-" numbers
-set number
-set numberwidth=4
+set autoindent
+set autoread
+set ignorecase smartcase
+set laststatus=2  " Always show status line.
+set relativenumber
+
+set numberwidth=2
 set relativenumber
 
 " Softtabs, 2 spaces
@@ -90,8 +71,20 @@ set shiftround
 set splitbelow
 set splitright
 
-" Makr it obvious where 80 characters is
-" set textwidth=80
-" set colorcolumn=+1
-
 set background=dark
+colorscheme solarized
+
+" Disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
