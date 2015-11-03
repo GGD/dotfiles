@@ -16,6 +16,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'kana/vim-textobj-user'
@@ -26,35 +27,13 @@ Plugin 'altercation/vim-colors-solarized'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-set ignorecase smartcase
-set autoread
+syntax on
+colorscheme solarized
 
-" numbers
-set number
-set numberwidth=4
-set relativenumber
-
-" Softtabs, 2 spaces
-set expandtab
-set tabstop=2
-set shiftwidth=2
-set shiftround
-
-" Open new split panes to right and bottom, which feels more natural
-set splitbelow
-set splitright
-
-" Makr it obvious where 80 characters is
-" set textwidth=80
-" set colorcolumn=+1
 
 " Disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" theme
-syntax enable
-set background=dark
-colorscheme solarized
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
@@ -93,3 +72,26 @@ map <Leader>rn :call RunNearestSpec()<cr>
 map <Leader>rl :call RunLastSpec()<cr>
 map <Leader>ra :call RunAllSpecs()<cr>
 
+set ignorecase smartcase
+set autoread
+
+" numbers
+set number
+set numberwidth=4
+set relativenumber
+
+" Softtabs, 2 spaces
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set shiftround
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" Makr it obvious where 80 characters is
+" set textwidth=80
+" set colorcolumn=+1
+
+set background=dark
