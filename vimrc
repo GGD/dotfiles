@@ -13,6 +13,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-commentary'
+Plugin 'thoughtbot/vim-rspec'
 Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
@@ -30,8 +34,8 @@ set shiftwidth=2
 set shiftround
 
 " Makr it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
+" set textwidth=80
+" set colorcolumn=+1
 
 " theme
 syntax enable
