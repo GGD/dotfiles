@@ -54,6 +54,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
+# optionally set DEFAULT_USER in ~/.zshrc to your regular username to hide the “user@hostname” info when you’re logged in as yourself on your local machine.
+DEFAULT_USER=`whoami`
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
