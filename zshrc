@@ -90,3 +90,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 prompt_dir() {
   prompt_segment blue black ' %c '
 }
+
+# Setting of Jump gem
+source `jump-bin --zsh-integration`
+alias j=jump
