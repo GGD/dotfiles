@@ -85,3 +85,8 @@ compctl -W ~/Dropbox/projects -/ code
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Overwrite path display of agnoster theme
+prompt_dir() {
+  prompt_segment blue black ' %c '
+}
