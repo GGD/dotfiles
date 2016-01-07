@@ -1,0 +1,26 @@
+[init]
+  templatedir = ~/.git_template
+[color]
+	ui = true
+[user]
+	name = GaDii Jian
+	email = ggd747@gmail.com
+[alias]
+	ck = checkout
+	cm = commit
+	st = status
+	br = branch
+	df = diff
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[core]
+	excludesfile = /Users/gadii/.gitignore_global
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

@@ -1,0 +1,2 @@
+# ctags for :scope in Rails
+--regex-ruby=/^[ 	]*scope[ 	]*:([a-zA-Z0-9_]+)/\1/
