@@ -73,9 +73,6 @@ DEFAULT_USER=`whoami`
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-code() { cd ~/Dropbox/projects/$1; }
-compctl -W ~/Dropbox/projects -/ code
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -88,9 +85,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Overwrite path display of agnoster theme
 prompt_dir() {
-  prompt_segment blue black ' %c '
+  prompt_segment blue black '%c'
 }
 
-# Setting of Jump gem
-source `jump-bin --zsh-integration`
-alias j=jump
+# List frequently used directory for cd
+cdpath=($HOME/Documents/projects $HOME/Dropbox/projects/private $HOME/Dropbox/projects/company)
