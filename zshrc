@@ -66,6 +66,7 @@ DEFAULT_USER=`whoami`
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='subl -w'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
