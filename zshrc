@@ -92,3 +92,7 @@ prompt_dir() {
 cdpath=($HOME/Documents/projects $HOME/Dropbox/projects/private $HOME/Dropbox/projects/company)
 
 export EDITOR='subl -w'
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
