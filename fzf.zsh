@@ -74,6 +74,3 @@ fshow() {
 FZF-EOF"
 }
 
-
-# alias
-alias gstl='fstash'
