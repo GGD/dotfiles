@@ -45,7 +45,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler fasd git osx rails zeus)
+plugins=(bundler fasd git osx rails zeus alias-tips)
 
 # User configuration
 
@@ -82,6 +82,9 @@ export EDITOR='subl -w'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias gpr="hub pull-request"
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Overwrite path display of agnoster theme
@@ -97,3 +100,14 @@ export EDITOR='subl -w'
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export PATH="/usr/local/sbin:$PATH"
+
+# lunchy tab-completion
+LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
+if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
+  . $LUNCHY_DIR/lunchy-completion.zsh
+fi
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
