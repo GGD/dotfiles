@@ -102,12 +102,6 @@ export EDITOR='subl -w'
 
 export PATH="/usr/local/sbin:$PATH"
 
-# lunchy tab-completion
-LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
-if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
-  . $LUNCHY_DIR/lunchy-completion.zsh
-fi
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
