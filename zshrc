@@ -105,3 +105,6 @@ export PATH="/usr/local/sbin:$PATH"
 # nvm
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
+
+# rbenv
+eval "$(rbenv init -)"
