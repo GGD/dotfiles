@@ -8,87 +8,62 @@ filetype off     " Required by vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'tomtom/tcomment_vim'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'bling/vim-airline'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-syntax on                 " Enable syntax highlighting
-
-let mapleader=","
-
-map <Leader>vim :source ~/.vimrc<cr>
-map <Leader>mvim :e $MYVIMRC<cr>
-map <Leader>f :CtrlP<cr>
-map <Leader>l <C-w>l<cr>
-map <Leader>h <C-w>h<cr>
-map <Leader>j <C-w>j<cr>
-map <Leader>k <C-w>k<cr>
-map <Leader>L <C-w>L<cr>
-map <Leader>H <C-w>H<cr>
-map <Leader>J <C-w>J<cr>
-map <Leader>K <C-w>K<cr>
-map <Leader>bb :!bundle install<cr>
-map <Leader>bi :source ~/.vimrc<cr>:PluginInstall<cr>
-map <Leader>d orequire'pry';binding.pry<esc>:w<cr>
-map <Leader>ed o<%=binding.pry%><esc>:w<cr>
-map <Leader>sc :w !pbcopy<cr>
-map <Leader>sp :r !pbpaste<cr>
-" RSpec.vim mappings
-map <Leader>rc :call RunCurrentSpecFile()<cr>
-map <Leader>rn :call RunNearestSpec()<cr>
-map <Leader>rl :call RunLastSpec()<cr>
-map <Leader>ra :call RunAllSpecs()<cr>
 
 
-set autoindent
-set autoread
-set ignorecase smartcase
-set laststatus=2  " Always show status line.
-set relativenumber
-
-set numberwidth=2
-set relativenumber
+set backspace=2
 
 " Softtabs, 2 spaces
-set expandtab
 set tabstop=2
 set shiftwidth=2
 set shiftround
+set expandtab
 
-" Open new split panes to right and bottom, which feels more natural
-set splitbelow
-set splitright
+" Numbers
+set relativenumber
+set numberwidth=5
 
+
+
+" Theme
+syntax enable
 set background=dark
 colorscheme solarized
 
-" Disable automatic comment insertion
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
+" Vim-rails setting
+let g:rails_ctags_arguments = ['--languages=ruby --exclude=.git --exclude=log .']
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
+let mapleader = "\<Space>"
 
-" Automatically removing all trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+nmap <Leader>vr :vsp $MYVIMRC<CR>
+nmap <Leader>so :source $MYVIMRC<CR>
+
+" Move inside a sigle line
+nmap k gk
+nmap j gj
+
+map <Leader>. gt
+nmap <Leader>, gT
+map <Leader>a :w<CR>:call RunAllSpecs()<CR>
+map <Leader>bb obyebug<ESC>:w<CR>
+nmap <Leader>co ggVGy"*y
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>s :w<CR>:call RunNearestSpec()<CR>
+map <Leader>t :w<CR>:call RunCurrentSpecFile()<CR>
+
