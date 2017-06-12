@@ -2,7 +2,6 @@ tap "neovim/neovim"
 
 brew "1password"
 cask "alfred"
-brew "ansible"
 cask "bartender"
 cask "bettertouchtool"
 cask "boom"
