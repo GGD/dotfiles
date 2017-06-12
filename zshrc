@@ -45,7 +45,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler fasd git osx rails zeus alias-tips)
+plugins=(bundler git rails alias-tips)
 
 # User configuration
 
@@ -84,8 +84,7 @@ export EDITOR='subl -w'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias gpr="hub pull-request"
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+alias vim="nvim"
 
 # Overwrite path display of agnoster theme
 prompt_dir() {
@@ -95,8 +94,6 @@ prompt_dir() {
 # List frequently used directory for cd
 cdpath=($HOME/Documents/projects $HOME/Dropbox/projects/private $HOME/Dropbox/projects/company)
 
-export EDITOR='subl -w'
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -104,7 +101,10 @@ export PATH="/usr/local/sbin:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" --no-use # This loads nvm
+
+alias node='unalias node ; unalias npm ; nvm use default ; node $@'
+alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

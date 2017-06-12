@@ -1,5 +1,5 @@
 [init]
-  templatedir = ~/.git_template
+	templatedir = ~/.git_template
 [color]
 	ui = true
 [user]
@@ -11,6 +11,7 @@
 	st = status
 	br = branch
 	df = diff
+	ctags = !.git/hooks/ctags
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
