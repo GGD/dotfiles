@@ -1,6 +1,6 @@
 tap "neovim/neovim"
 
-brew "1password"
+cask "1password"
 cask "alfred"
 cask "bartender"
 cask "bettertouchtool"
