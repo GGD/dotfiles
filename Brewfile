@@ -23,6 +23,7 @@ brew "htop-osx"
 brew "hub"
 brew "imagemagick"
 cask "iterm2"
+brew "markdown"
 cask "medis"
 brew "mysql", restart_service: true
 brew "neovim/neovim/neovim"

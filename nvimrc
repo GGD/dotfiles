@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'easymotion/vim-easymotion'
 Plug 'iCyMind/NeoSolarized'
+Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'kana/vim-textobj-user'
 Plug 'mileszs/ack.vim'
 Plug 'nelstrom/vim-textobj-rubyblock'
@@ -11,6 +12,7 @@ Plug 'slim-template/vim-slim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
@@ -43,12 +45,22 @@ set termguicolors
 set background=dark
 colorscheme NeoSolarized
 
+
+" command autocompletion
+set wildmode=longest,full
+set wildmenu
+set ignorecase
+
+
 " fzf
 set rtp+=/usr/local/opt/fzf
 
 
-" Vim-rails setting
+" vim-rails setting
 let g:rails_ctags_arguments = ['--languages=ruby --exclude=.git --exclude=log .']
+
+" vim-markdown setting
+let vim_markdown_preview_hotkey='<C-m>'
 
 
 let mapleader = "\<Space>"
@@ -73,4 +85,3 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 
 vmap <C-c> "*y
 map <C-p> :FZF<CR>
-
