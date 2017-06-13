@@ -1,11 +1,8 @@
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
 call plug#begin('~/.vim/plugged')
 
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'freeo/vim-kalisi'
 Plug 'iCyMind/NeoSolarized'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'pearofducks/ansible-vim'
@@ -45,6 +42,9 @@ set termguicolors
 set background=dark
 colorscheme NeoSolarized
 
+" fzf
+set rtp+=/usr/local/opt/fzf
+
 
 " Vim-rails setting
 let g:rails_ctags_arguments = ['--languages=ruby --exclude=.git --exclude=log .']
@@ -63,10 +63,11 @@ map <Leader>. gt
 nmap <Leader>, gT
 map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>bp orequire 'pry'; binding.pry<ESC>:w<CR>
-nmap <Leader>co ggVG"*y
+map <Leader>co ggVG"*y
 map <Leader>d obyebug<ESC>:w<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>t :call RunCurrentSpecFile()<CR>
 
 vmap <C-c> "*y
+
