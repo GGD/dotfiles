@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'easymotion/vim-easymotion'
 Plug 'iCyMind/NeoSolarized'
 Plug 'kana/vim-textobj-user'
+Plug 'mileszs/ack.vim'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'pearofducks/ansible-vim'
 Plug 'slim-template/vim-slim'
@@ -65,9 +66,11 @@ map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>bp orequire 'pry'; binding.pry<ESC>:w<CR>
 map <Leader>co ggVG"*y
 map <Leader>d obyebug<ESC>:w<CR>
+map <Leader>f :Ack<Space>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>t :call RunCurrentSpecFile()<CR>
 
 vmap <C-c> "*y
+map <C-p> :FZF<CR>
 
