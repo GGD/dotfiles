@@ -1,6 +1,6 @@
 tap "neovim/neovim"
 
-brew "1password"
+cask "1password"
 brew "ack"
 cask "alfred"
 cask "bartender"
