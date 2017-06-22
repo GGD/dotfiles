@@ -1,5 +1,4 @@
-" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'easymotion/vim-easymotion'
 Plug 'iCyMind/NeoSolarized'
@@ -7,12 +6,14 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'kana/vim-textobj-user'
 Plug 'mileszs/ack.vim'
 Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'neomake/neomake'
+Plug 'pangloss/vim-javascript'
 Plug 'pearofducks/ansible-vim'
 Plug 'slim-template/vim-slim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
@@ -61,6 +62,9 @@ let g:rails_ctags_arguments = ['--languages=ruby --exclude=.git --exclude=log .'
 
 " vim-markdown setting
 let vim_markdown_preview_hotkey='<C-m>'
+
+" neomake setting
+autocmd! BufWritePost * Neomake
 
 
 let mapleader = "\<Space>"
