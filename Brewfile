@@ -55,16 +55,13 @@ cask "vlc"
 brew "wget"
 cask "welly"
 brew "youtube-dl"
-brew "zsh"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 
-mas "Astro for Facebook Messenger", id: 772982392
 mas "Boom 2", id: 948176063
 mas "Coffitivity", id: 659901392
 mas "Droplr", id: 498672703
 mas "Eggscellent", id: 522294492
-mas "Evernote", id: 406056744
 mas "Kindle", id: 405399194
 mas "LastPass", id: 926036361
 mas "LINE", id: 539883307
