@@ -3,15 +3,18 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'easymotion/vim-easymotion'
 Plug 'iCyMind/NeoSolarized'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'janko-m/vim-test'
+Plug 'jiangmiao/auto-pairs'
 Plug 'kana/vim-textobj-user'
 Plug 'mileszs/ack.vim'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'neomake/neomake'
 Plug 'pangloss/vim-javascript'
 Plug 'pearofducks/ansible-vim'
+Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim'
-Plug 'thoughtbot/vim-rspec'
 Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -66,6 +69,10 @@ let vim_markdown_preview_hotkey='<C-m>'
 " neomake setting
 autocmd! BufWritePost * Neomake
 
+" vim-test setting
+let test#strategy = 'basic'
+let test#javascript#mocha#executable = 'node_modules/mocha/bin/mocha --require babel-register'
+
 
 let mapleader = "\<Space>"
 
@@ -78,14 +85,22 @@ nmap j gj
 
 map <Leader>. gt
 nmap <Leader>, gT
-map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>bp orequire 'pry'; binding.pry<ESC>:w<CR>
 map <Leader>co ggVG"*y
 map <Leader>d obyebug<ESC>:w<CR>
 map <Leader>f :Ack<Space>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>t :call RunCurrentSpecFile()<CR>
+
+" nerd-tree
+map <Leader>nt :NERDTree<CR>
+
+" vim-test
+map <Leader>s :w<CR>:TestNearest<CR>
+map <Leader>l :w<CR>:TestLast<CR>
+map <Leader>t :w<CR>:TestFile<CR>
+map <Leader>a :w<CR>:TestSuite<CR>
+map <Leader>v :TestVisit<CR>
 
 vmap <C-c> "*y
+map <C-s> :w<CR>
 map <C-p> :FZF<CR>
+map <C-q> :q<CR>
