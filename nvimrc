@@ -14,6 +14,7 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'neomake/neomake'
 Plug 'pangloss/vim-javascript'
 Plug 'pearofducks/ansible-vim'
+Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim'
 Plug 'tomtom/tcomment_vim'
@@ -77,6 +78,18 @@ autocmd! BufWritePost * Neomake
 let test#strategy = 'basic'
 let test#javascript#mocha#executable = 'node_modules/mocha/bin/mocha --require babel-register'
 
+" neoformat setting
+let g:neoformat_try_formatprg = 1
+augroup NeoformatAutoFormat
+  autocmd!
+  autocmd FileType javascript setlocal formatprg=prettier\
+                                           \--stdin\
+                                           \--print-width\ 80\
+                                           \--single-quote\
+                                           \--trailing-comma\ es5
+  autocmd BufWritePre *.js,*.jsx Neoformat
+augroup END
+
 
 let mapleader = "\<Space>"
 
@@ -93,6 +106,8 @@ map <Leader>bp orequire 'pry'; binding.pry<ESC>:w<CR>
 map <Leader>co ggVG"*y
 map <Leader>d obyebug<ESC>:w<CR>
 map <Leader>f :Ack<Space>
+map <Leader>gb :Gblame<CR>
+map <Leader>sn :<C-U>SnippetFor<Space>
 
 " nerd-tree
 map <Leader>nt :NERDTree<CR>
@@ -108,3 +123,9 @@ vmap <C-c> "*y
 map <C-s> :w<CR>
 map <C-p> :FZF<CR>
 map <C-q> :q<CR>
+
+function! SearchSnippet(language)
+  let snippet='~/.local/share/nvim/plugged/vim-snippets/snippets/'.a:language.'.snippets'
+  execute 'tabedit' snippet
+endfunction
+command! -nargs=1 SnippetFor call SearchSnippet('<args>')
