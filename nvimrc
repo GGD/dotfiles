@@ -90,6 +90,9 @@ augroup NeoformatAutoFormat
   autocmd BufWritePre *.js,*.jsx Neoformat
 augroup END
 
+" ack-vim setting
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 
 let mapleader = "\<Space>"
 
