@@ -26,7 +26,7 @@ cask "iterm2"
 brew "markdown"
 cask "medis"
 brew "mysql", restart_service: true
-brew "neovim/neovim/neovim"
+brew "neovim"
 brew "node"
 brew "nvm"
 brew "openssh"
@@ -66,7 +66,6 @@ mas "Coffitivity", id: 659901392
 mas "Droplr", id: 498672703
 mas "Eggscellent", id: 522294492
 mas "Kindle", id: 405399194
-mas "LastPass", id: 926036361
 mas "LINE", id: 539883307
 mas "Manico", id: 724472954
 mas "Noizio", id: 928871589
