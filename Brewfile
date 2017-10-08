@@ -35,7 +35,6 @@ brew "phantomjs"
 brew "postgresql", restart_service: true
 cask "postman"
 cask "psequel"
-brew "qt"
 cask "rescuetime"
 brew "ruby-build"
 brew "rbenv"
@@ -76,4 +75,3 @@ mas "Reeder", id: 880001334
 mas "Spark", id: 1176895641
 mas "The Unarchiver", id: 425424353
 mas "Twitter", id: 409789998
-mas "Wunderlist", id: 410628904
