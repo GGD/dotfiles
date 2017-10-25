@@ -109,6 +109,13 @@ alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
 # zsh syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
