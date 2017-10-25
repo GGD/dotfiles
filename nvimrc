@@ -76,7 +76,7 @@ let vim_markdown_preview_hotkey='<C-m>'
 autocmd! BufWritePost * Neomake
 
 " vim-test setting
-let test#strategy = 'basic'
+let test#strategy = 'neovim'
 let test#javascript#mocha#executable = 'node_modules/mocha/bin/mocha --require babel-register'
 
 " neoformat setting
