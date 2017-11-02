@@ -15,7 +15,6 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'neomake/neomake'
 Plug 'pangloss/vim-javascript'
 Plug 'pearofducks/ansible-vim'
-Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim'
 Plug 'tomtom/tcomment_vim'
@@ -78,18 +77,6 @@ autocmd! BufWritePost * Neomake
 " vim-test setting
 let test#strategy = 'neovim'
 let test#javascript#mocha#executable = 'node_modules/mocha/bin/mocha --require babel-register'
-
-" neoformat setting
-let g:neoformat_try_formatprg = 1
-augroup NeoformatAutoFormat
-  autocmd!
-  autocmd FileType javascript setlocal formatprg=prettier\
-                                           \--stdin\
-                                           \--print-width\ 80\
-                                           \--single-quote\
-                                           \--trailing-comma\ es5
-  autocmd BufWritePre *.js,*.jsx Neoformat
-augroup END
 
 " ack-vim setting
 let g:ackprg = 'ag --nogroup --nocolor --column'
