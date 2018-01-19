@@ -100,6 +100,7 @@ map <Leader>co ggVG"*y
 map <Leader>d obyebug<ESC>:w<CR>
 map <Leader>f :Ack<Space>
 map <Leader>gb :Gblame<CR>
+map <Leader>nh :nohl<CR>
 map <Leader>sn :<C-U>SnippetFor<Space>
 
 " nerd-tree
