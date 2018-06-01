@@ -71,7 +71,6 @@ brew "zsh-syntax-highlighting"
 mas "Boom 2", id: 948176063
 mas "Coffitivity", id: 659901392
 mas "Droplr", id: 498672703
-mas "Eggscellent", id: 522294492
 mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
 mas "Manico", id: 724472954
