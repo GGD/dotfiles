@@ -131,6 +131,9 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/gadii/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/gadii/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
