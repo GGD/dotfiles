@@ -91,7 +91,7 @@ map <Leader>bp orequire 'pry'; binding.pry<ESC>:w<CR>
 map <Leader>co ggVG"*y
 map <Leader>d obyebug<ESC>:w<CR>
 map <Leader>md :!mkdir -p<Space>
-map <Leader>to :touch<Space>
+map <Leader>to :!touch<Space>
 
 vmap <C-c> "*y
 map <C-h> :nohl<CR>
