@@ -32,6 +32,7 @@ runtime macros/matchit.vim
 
 
 
+set bg=light
 set backspace=2
 " Softtabs, 2 spaces
 set tabstop=2
@@ -89,9 +90,11 @@ nmap j gj
 map <Leader>bp orequire 'pry'; binding.pry<ESC>:w<CR>
 map <Leader>co ggVG"*y
 map <Leader>d obyebug<ESC>:w<CR>
-map <Leader>nh :nohl<CR>
+map <Leader>md :!mkdir -p<Space>
+map <Leader>to :touch<Space>
 
 vmap <C-c> "*y
+map <C-h> :nohl<CR>
 map <C-p> :FZF<CR>
 map <C-s> :w<CR>
 map <C-q> :q<CR>
