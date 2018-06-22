@@ -123,9 +123,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
-# thefuck
-eval "$(thefuck --alias)"
-
 # android studio
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
@@ -133,10 +130,3 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/gadii/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/gadii/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/gadii/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/gadii/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
