@@ -22,6 +22,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'janko-m/vim-test'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'posva/vim-vue'
 call plug#end()
 
