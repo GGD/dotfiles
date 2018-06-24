@@ -45,7 +45,15 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler git rails alias-tips fast-syntax-highlighting)
+plugins=(
+  alias-tips
+  bundler
+  fast-syntax-highlighting
+  git
+  rails
+  tmux
+  tmuxinator
+)
 
 # User configuration
 
@@ -92,7 +100,7 @@ prompt_dir() {
 }
 
 # List frequently used directory for cd
-cdpath=($HOME/Documents/projects $HOME/Dropbox/projects/private $HOME/Dropbox/projects/company)
+cdpath=($HOME/Documents/projects $HOME/Dropbox/projects/private)
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -127,3 +135,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# fh - repeat history
+fh() {
+  eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
+}
