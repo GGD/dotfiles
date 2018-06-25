@@ -10,6 +10,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tcomment_vim'
 Plug 'tomtom/tlib_vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tpope/vim-dispatch'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
@@ -70,11 +71,8 @@ autocmd! BufWritePost * Neomake
 " vim-rails setting
 let g:rails_ctags_arguments = ['--languages=ruby --exclude=.git --exclude=log .']
 
-" asyncrun.vim setting
-let g:asyncrun_open = 8
-
 " vim-test setting
-let test#strategy = 'asyncrun'
+let test#strategy = 'dispatch'
 let test#javascript#mocha#executable = 'node_modules/mocha/bin/mocha --require babel-register'
 
 
