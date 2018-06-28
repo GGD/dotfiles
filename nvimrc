@@ -1,30 +1,43 @@
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'mileszs/ack.vim'
-Plug 'pearofducks/ansible-vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'skywind3000/asyncrun.vim'
-Plug 'mattn/emmet-vim'
-Plug 'neomake/neomake'
+" UI
 Plug 'iCyMind/NeoSolarized'
+Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdtree'
-Plug 'tomtom/tcomment_vim'
-Plug 'tomtom/tlib_vim'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tpope/vim-dispatch'
-Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-fugitive'
-Plug 'pangloss/vim-javascript'
 Plug 'airblade/vim-gitgutter'
+
+" Search
+Plug 'easymotion/vim-easymotion'
+Plug 'mileszs/ack.vim'
+Plug 'haya14busa/incsearch-easymotion.vim'
+Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch-fuzzy.vim'
+
+" Syntax
+Plug 'pearofducks/ansible-vim'
+Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-repeat'
 Plug 'vim-ruby/vim-ruby'
 Plug 'slim-template/vim-slim'
+Plug 'posva/vim-vue'
+
+" Snippet
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
+
+" Tool
+Plug 'jiangmiao/auto-pairs'
+
+Plug 'mattn/emmet-vim'
+Plug 'neomake/neomake'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'janko-m/vim-test'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'posva/vim-vue'
 call plug#end()
 
 
@@ -89,17 +102,15 @@ nmap j gj
 map <Leader>bp orequire 'pry'; binding.pry<ESC>:w<CR>
 map <Leader>co ggVG"*y
 map <Leader>d obyebug<ESC>:w<CR>
-map <Leader>md :!mkdir -p<Space>
-map <Leader>to :!touch<Space>
+map <Leader>h :nohl<CR>
 
 vmap <C-c> "*y
-map <C-h> :nohl<CR>
 map <C-p> :FZF<CR>
 map <C-s> :w<CR>
 map <C-q> :q<CR>
 
 " ack.vim
-map <Leader>f :Ack<Space>
+map <Leader>F :Ack<Space>
 
 " nerd-tree
 map <Leader>nt :NERDTree<CR>
@@ -113,3 +124,31 @@ map <Leader>l :w<CR>:TestLast<CR>
 map <Leader>t :w<CR>:TestFile<CR>
 map <Leader>a :w<CR>:TestSuite<CR>
 map <Leader>v :TestVisit<CR>
+
+" indentLine
+map <Leader>it :IndentLinesToggle<CR>
+
+" vim-easymition
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" vim-incsearch with vim-easymotion
+" You can use other keymappings like <C-l> instead of <CR> if you want to
+" use these mappings as default search and somtimes want to move cursor with
+" EasyMotion.
+function! s:incsearch_config(...) abort
+  return incsearch#util#deepextend(deepcopy({
+  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
+  \   'keymap': {
+  \     "\<CR>": '<Over>(easymotion)'
+  \   },
+  \   'is_expr': 0
+  \ }), get(a:, 1, {}))
+endfunction
+noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
+noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
+noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
