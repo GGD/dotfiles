@@ -2,7 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 " UI
 Plug 'iCyMind/NeoSolarized'
 Plug 'Yggdroot/indentLine'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
 Plug 'airblade/vim-gitgutter'
 
 " Search
@@ -30,9 +30,9 @@ Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'mattn/emmet-vim'
-Plug 'neomake/neomake'
+Plug 'neomake/neomake', { 'on': 'Neomake' }
 Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-dispatch', { 'on': 'Dispatch' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'

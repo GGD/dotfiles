@@ -1,5 +1,6 @@
 tap "neovim/neovim"
 tap "caskroom/fonts"
+tap "buo/cask-upgrade"
 
 cask "1password"
 brew "ack"

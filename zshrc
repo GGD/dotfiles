@@ -48,6 +48,7 @@ ZSH_THEME="agnoster"
 plugins=(
   alias-tips
   bundler
+  docker-compose
   fast-syntax-highlighting
   git
   rails
