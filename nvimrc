@@ -28,7 +28,6 @@ Plug 'honza/vim-snippets'
 
 " Tool
 Plug 'jiangmiao/auto-pairs'
-
 Plug 'mattn/emmet-vim'
 Plug 'neomake/neomake', { 'on': 'Neomake' }
 Plug 'tomtom/tcomment_vim'
@@ -88,6 +87,8 @@ let g:rails_ctags_arguments = ['--languages=ruby --exclude=.git --exclude=log .'
 let test#strategy = 'dispatch'
 let test#javascript#mocha#executable = 'node_modules/mocha/bin/mocha --require babel-register'
 
+" indentLine
+let g:indentLine_enabled = 0
 
 
 let mapleader = "\<Space>"
@@ -126,7 +127,7 @@ map <Leader>a :w<CR>:TestSuite<CR>
 map <Leader>v :TestVisit<CR>
 
 " indentLine
-map <Leader>it :IndentLinesToggle<CR>
+map <Leader>il :IndentLinesToggle<CR>
 
 " vim-easymition
 " <Leader>f{char} to move to {char}
