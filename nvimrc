@@ -104,6 +104,7 @@ map <Leader>bp orequire 'pry'; binding.pry<ESC>:w<CR>
 map <Leader>co ggVG"*y
 map <Leader>d obyebug<ESC>:w<CR>
 map <Leader>h :nohl<CR>
+map <Leader>j :%!python -m json.tool<CR>
 
 vmap <C-c> "*y
 map <C-p> :FZF<CR>
