@@ -11,9 +11,11 @@ Plug 'mileszs/ack.vim'
 Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/incsearch-fuzzy.vim'
+Plug 'brooth/far.vim'
 
 " Syntax
 Plug 'pearofducks/ansible-vim'
+Plug 'elixir-editors/vim-elixir'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
@@ -21,12 +23,14 @@ Plug 'slim-template/vim-slim'
 Plug 'posva/vim-vue'
 
 " Snippet
+Plug 'mattn/emmet-vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 " Tool
+Plug 'slashmili/alchemist.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'neomake/neomake', { 'on': 'Neomake' }

@@ -62,6 +62,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # optionally set DEFAULT_USER in ~/.zshrc to your regular username to hide the “user@hostname” info when you’re logged in as yourself on your local machine.
 DEFAULT_USER=`whoami`
@@ -93,6 +94,7 @@ export EDITOR='nvim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias gpr="hub pull-request"
+alias rrg="command rg"
 alias vim="nvim"
 
 # Overwrite path display of agnoster theme
@@ -141,3 +143,6 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 fh() {
   eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
 }
+
+# z
+. /usr/local/etc/profile.d/z.sh
