@@ -42,7 +42,7 @@ brew "node"
 brew "nvm"
 brew "openssh"
 brew "openssl"
-brwe "pgcli"
+brew "pgcli"
 brew "phantomjs"
 brew "postgresql", restart_service: true
 cask "postman"
