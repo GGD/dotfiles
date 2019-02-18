@@ -54,6 +54,7 @@ plugins=(
   rails
   tmux
   tmuxinator
+  zsh-autosuggestions
 )
 
 # User configuration
@@ -62,7 +63,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # optionally set DEFAULT_USER in ~/.zshrc to your regular username to hide the “user@hostname” info when you’re logged in as yourself on your local machine.
 DEFAULT_USER=`whoami`
@@ -118,6 +118,7 @@ alias node='unalias node ; unalias npm ; nvm use default ; node $@'
 alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
 
 # rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # pyenv
@@ -146,3 +147,6 @@ fh() {
 
 # z
 . /usr/local/etc/profile.d/z.sh
+
+# zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
