@@ -36,6 +36,7 @@ brew "hub"
 cask "iina"
 brew "imagemagick"
 cask "iterm2"
+brew "lazygit"
 brew "markdown"
 brew "mysql", restart_service: true
 brew "neovim"

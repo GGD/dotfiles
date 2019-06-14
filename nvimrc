@@ -120,6 +120,7 @@ map <Leader>F :Ack<Space>
 
 " nerd-tree
 map <Leader>nt :NERDTree<CR>
+map <Leader>nf :NERDTreeFind<CR>
 
 " fugitive.vim
 map <Leader>gb :Gblame<CR>

@@ -95,6 +95,7 @@ export EDITOR='nvim'
 alias gpr="hub pull-request"
 alias rrg="command rg"
 alias vim="nvim"
+alias lg='lazygit'
 
 # Overwrite path display of agnoster theme
 prompt_dir() {
@@ -148,4 +149,4 @@ fh() {
 . /usr/local/etc/profile.d/z.sh
 
 # zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
