@@ -34,6 +34,7 @@ Plug 'slashmili/alchemist.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'neomake/neomake', { 'on': 'Neomake' }
+Plug 'godlygeek/tabular'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-dispatch', { 'on': 'Dispatch' }
 Plug 'tpope/vim-fugitive'

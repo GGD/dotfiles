@@ -41,7 +41,6 @@ brew "markdown"
 brew "mysql", restart_service: true
 brew "neovim"
 brew "node"
-brew "nvm"
 brew "openssh"
 brew "openssl"
 brew "pgcli"

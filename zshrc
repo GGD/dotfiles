@@ -111,11 +111,7 @@ cdpath=($HOME/Documents/projects $HOME/Dropbox/projects/private)
 export PATH="/usr/local/sbin:$PATH"
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" --no-use # This loads nvm
-
-alias node='unalias node ; unalias npm ; nvm use default ; node $@'
-alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
+source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
