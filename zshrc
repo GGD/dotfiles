@@ -150,3 +150,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/gadii/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+# flutter
+export PATH="$PATH:/Users/gadii/.flutterio/bin"
