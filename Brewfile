@@ -3,7 +3,7 @@ tap "caskroom/fonts"
 tap "isacikgoz/gitin"
 tap "neovim/neovim"
 
-cask "1password6"
+cask "1password"
 brew "ack"
 cask "alfred"
 brew "ansible"
