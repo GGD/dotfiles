@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@vue/cli": "^3.8.4",
+    "@vue/cli": "^4.2.3",
     "eslint": "^6.0.1",
     "parcel-bundler": "^1.4.1",
     "pm2": "^2.6.1",

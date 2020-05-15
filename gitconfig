@@ -13,9 +13,10 @@
 	df = diff
 	ctags = !.git/hooks/ctags
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [core]
 	excludesfile = /Users/gadii/.gitignore_global
 	editor = vim

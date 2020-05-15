@@ -116,6 +116,7 @@ source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # pyenv
