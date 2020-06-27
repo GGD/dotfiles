@@ -22,8 +22,9 @@ autoload -Uz _zinit
 zinit light zdharma/fast-syntax-highlighting
 zinit light romkatv/powerlevel10k
 zinit light rupa/z
-zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light lukechilds/zsh-nvm
 
 zinit snippet OMZ::lib/clipboard.zsh
 zinit snippet OMZ::lib/completion.zsh
@@ -37,6 +38,7 @@ zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 zinit snippet OMZ::plugins/fzf/fzf.plugin.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/heroku/heroku.plugin.zsh
+zinit snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
 zinit snippet OMZ::plugins/rails/rails.plugin.zsh
 zinit snippet OMZ::plugins/tmuxinator/tmuxinator.plugin.zsh
 ### End of Zinit's installer chunk
