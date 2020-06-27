@@ -1,3 +1,4 @@
+tap "agrinman/tap"
 tap "buo/cask-upgrade"
 tap "caskroom/fonts"
 tap "isacikgoz/gitin"
@@ -5,6 +6,7 @@ tap "neovim/neovim"
 
 cask "1password"
 brew "ack"
+brew "agrinman/tap/tunnelto"
 cask "alfred"
 brew "ansible"
 cask "appcleaner"
