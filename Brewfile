@@ -55,6 +55,7 @@ brew "puma/puma/puma-dev"
 brew "rbenv"
 brew "redis", restart_service: true
 cask "rescuetime"
+cask "responsively"
 brew "ripgrep"
 brew "ruby-build"
 cask "sequel-pro"
