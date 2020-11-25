@@ -13,6 +13,8 @@ brew "ansible"
 cask "appcleaner"
 brew "bat"
 cask "bettertouchtool"
+cask "brave-browser"
+cask "caffeine"
 cask "chromedriver"
 cask "clyang-welly"
 brew "ctags"
@@ -40,7 +42,6 @@ brew "httpie"
 brew "hub"
 cask "iina"
 brew "imagemagick"
-cask "caffeine"
 cask "insomnia"
 cask "iterm2"
 brew "jq"
@@ -49,6 +50,7 @@ cask "karabiner-elements"
 cask "keka"
 brew "lazygit"
 brew "markdown"
+brew "mcbopomofo"
 brew "mysql", restart_service: true
 brew "neovim"
 brew "node"
@@ -69,7 +71,6 @@ brew "ruby-build"
 cask "sequel-pro"
 cask "slack"
 cask "spotify"
-cask "squirrel"
 cask "tableplus"
 brew "the_silver_searcher"
 brew "tig"
@@ -91,7 +92,6 @@ brew "zsh-syntax-highlighting"
 
 mas "Aurora Reader", id: 1482754298
 mas "Boom 2", id: 948176063
-mas "Coffitivity", id: 659901392
 mas "Droplr", id: 498672703
 mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
