@@ -102,7 +102,6 @@ mas "LyricsX", id: 1254743014
 mas "Manico", id: 724472954
 mas "Noizio", id: 928871589
 mas "Pocket", id: 568494494
-mas "Pomo Timer", id: 1447569061
 mas "Pushbullet", id: 948415170
 mas "Reeder", id: 1449412482
 mas "Spark", id: 1176895641
