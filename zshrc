@@ -40,12 +40,15 @@ zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/heroku/heroku.plugin.zsh
 zinit snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
 zinit snippet OMZ::plugins/rails/rails.plugin.zsh
+zinit snippet OMZ::plugins/nvm/nvm.plugin.zsh
 zinit snippet OMZ::plugins/tmuxinator/tmuxinator.plugin.zsh
 ### End of Zinit's installer chunk
 
 # alias
 alias gpr="hub pull-request"
 alias vim="nvim"
+alias rr="rails routes"
+alias rrg="rails routes | grep"
 
 export EDITOR="nvim"
 
@@ -62,3 +65,5 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# nvm
+NVM_AUTOLOAD=1
