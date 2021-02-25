@@ -47,7 +47,6 @@ cask "karabiner-elements"
 cask "keka"
 brew "lazygit"
 brew "markdown"
-brew "mcbopomofo"
 brew "mysql", restart_service: true
 brew "neovim"
 brew "node"
