@@ -55,7 +55,6 @@ brew "openssl"
 brew "overmind"
 brew "pgcli"
 brew "postgresql", restart_service: true
-cask "psequel"
 brew "puma/puma/puma-dev"
 brew "rbenv"
 brew "redis", restart_service: true
