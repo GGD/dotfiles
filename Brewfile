@@ -16,7 +16,7 @@ cask "bettertouchtool"
 cask "brave-browser"
 cask "caffeine"
 cask "chromedriver"
-cask "clyang-welly"
+cask "welly"
 brew "ctags"
 cask "dash3"
 cask "discord"
@@ -63,8 +63,6 @@ cask "rescuetime"
 cask "responsively"
 brew "ripgrep"
 brew "ruby-build"
-cask "sequel-pro"
-cask "showyedge"
 cask "slack"
 cask "spotify"
 cask "stats"
@@ -88,11 +86,8 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 
-mas "Aurora Reader", id: 1482754298
-mas "Droplr", id: 498672703
 mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
-mas "LyricsX", id: 1254743014
 mas "Manico", id: 724472954
 mas "Noizio", id: 928871589
 mas "Pocket", id: 568494494
