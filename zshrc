@@ -67,3 +67,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # nvm
 NVM_AUTOLOAD=1
+
+# brew
+eval $(/opt/homebrew/bin/brew shellenv)
