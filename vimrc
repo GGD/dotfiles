@@ -48,6 +48,8 @@ colorscheme solarized
 " Vim-rails setting
 let g:rails_ctags_arguments = ['--languages=ruby --exclude=.git --exclude=log .']
 
+" vim-snipmate setting
+let g:snipMate = { 'snippet_version' : 1 }
 
 let mapleader = "\<Space>"
 

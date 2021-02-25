@@ -95,6 +95,8 @@ let test#javascript#mocha#executable = 'node_modules/mocha/bin/mocha --require b
 " indentLine
 let g:indentLine_enabled = 0
 
+" vim-snipmate setting
+let g:snipMate = { 'snippet_version' : 1 }
 
 let mapleader = "\<Space>"
 
