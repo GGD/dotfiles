@@ -1,6 +1,6 @@
 tap "agrinman/tap"
+tap "homebrew/cask-fonts"
 tap "buo/cask-upgrade"
-tap "caskroom/fonts"
 tap "isacikgoz/gitin"
 tap "jesseduffield/lazydocker"
 tap "neovim/neovim"
