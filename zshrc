@@ -35,7 +35,6 @@ zinit snippet OMZ::lib/git.zsh
 zinit snippet OMZ::lib/theme-and-appearance.zsh
 zinit snippet OMZ::plugins/bundler/bundler.plugin.zsh
 zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
-zinit snippet OMZ::plugins/fzf/fzf.plugin.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/heroku/heroku.plugin.zsh
 zinit snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
@@ -72,3 +71,9 @@ NVM_AUTOLOAD=1
 eval $(/opt/homebrew/bin/brew shellenv)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# rbenv
+eval "$(rbenv init -)"
+
+# fzf
+export FZF_BASE=/opt/homebrew/bin/fzf

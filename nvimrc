@@ -8,6 +8,8 @@ Plug 'airblade/vim-gitgutter'
 " Search
 Plug 'easymotion/vim-easymotion'
 Plug 'mileszs/ack.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/incsearch-fuzzy.vim'
