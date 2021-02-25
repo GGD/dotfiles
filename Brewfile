@@ -25,8 +25,6 @@ cask "dockey"
 brew "docker-compose"
 cask "dozer"
 cask "dropbox"
-brew "elixir"
-brew "erlang"
 cask "evernote"
 brew "fd"
 cask "firefox"
@@ -36,7 +34,6 @@ brew "fzf"
 brew "git"
 cask "gitup"
 cask "goofy"
-cask "google-chrome"
 brew "htop-osx"
 brew "httpie"
 brew "hub"
@@ -94,7 +91,6 @@ brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 
 mas "Aurora Reader", id: 1482754298
-mas "Boom 2", id: 948176063
 mas "Droplr", id: 498672703
 mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
