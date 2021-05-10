@@ -24,7 +24,6 @@ zinit light romkatv/powerlevel10k
 zinit light rupa/z
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
-zinit light lukechilds/zsh-nvm
 
 zinit snippet OMZ::lib/clipboard.zsh
 zinit snippet OMZ::lib/completion.zsh
@@ -39,7 +38,6 @@ zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/heroku/heroku.plugin.zsh
 zinit snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
 zinit snippet OMZ::plugins/rails/rails.plugin.zsh
-zinit snippet OMZ::plugins/nvm/nvm.plugin.zsh
 zinit snippet OMZ::plugins/tmuxinator/tmuxinator.plugin.zsh
 ### End of Zinit's installer chunk
 
@@ -64,16 +62,13 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-# nvm
-NVM_AUTOLOAD=1
-
 # brew
 eval $(/opt/homebrew/bin/brew shellenv)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# rbenv
-eval "$(rbenv init -)"
-
 # fzf
 export FZF_BASE=/opt/homebrew/bin/fzf
+
+# fnm
+eval "$(fnm env)"
