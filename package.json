@@ -1,8 +1,9 @@
 {
   "dependencies": {
-    "@vue/cli": "^4.5.7",
+    "@vitejs/create-app": "^2.2.5",
+    "@vue/cli": "^4.5.13",
     "create-next-app": "^9.4.4",
-    "create-nuxt-app": "^3.4.0",
+    "create-nuxt-app": "^3.6.0",
     "eslint": "^6.0.1",
     "gulp": "^4.0.2",
     "parcel-bundler": "^1.4.1",

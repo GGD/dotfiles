@@ -36,7 +36,6 @@ zinit snippet OMZ::plugins/bundler/bundler.plugin.zsh
 zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/heroku/heroku.plugin.zsh
-zinit snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
 zinit snippet OMZ::plugins/rails/rails.plugin.zsh
 zinit snippet OMZ::plugins/tmuxinator/tmuxinator.plugin.zsh
 ### End of Zinit's installer chunk
@@ -70,5 +69,21 @@ eval $(/opt/homebrew/bin/brew shellenv)
 # fzf
 export FZF_BASE=/opt/homebrew/bin/fzf
 
-# fnm
-eval "$(fnm env)"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/gadii/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/gadii/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/gadii/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/gadii/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# asdf
+. /opt/homebrew/opt/asdf/asdf.sh
