@@ -11,6 +11,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" Syntax
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-ragtag'
+Plug 'slim-template/vim-slim'
+
 " Snippet
 Plug 'mattn/emmet-vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -21,6 +26,7 @@ Plug 'honza/vim-snippets'
 " Tools
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
+Plug 'AndrewRadev/tagalong.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'andymass/vim-matchup'
