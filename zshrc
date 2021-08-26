@@ -41,7 +41,6 @@ zinit snippet OMZ::plugins/tmuxinator/tmuxinator.plugin.zsh
 ### End of Zinit's installer chunk
 
 # alias
-alias gpr="hub pull-request"
 alias vim="nvim"
 alias rr="rails routes"
 alias rrg="rails routes | grep"
