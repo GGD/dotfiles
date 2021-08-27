@@ -24,6 +24,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 " Tools
+Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'AndrewRadev/tagalong.vim'
