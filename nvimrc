@@ -24,8 +24,9 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 " Tools
-Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
+Plug 'neovim/nvim-lspconfig'
+Plug 'ojroques/nvim-lspfuzzy'
 Plug 'godlygeek/tabular'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'tomtom/tcomment_vim'
@@ -118,3 +119,18 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 
 " vim-snipmate setting
 let g:snipMate = { 'snippet_version' : 1 }
+
+" nvim-lspconfig
+lua << EOF
+require'lspconfig'.solargraph.setup{}
+require'lspconfig'.pyright.setup{}
+EOF
+
+" nvim-lspfuzzy
+lua require('lspfuzzy').setup {}
+nnoremap <silent><leader>ls <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent><leader>ll <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent><leader>lg <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent><leader>la <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent><leader>l; <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent><leader>l, <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
