@@ -84,13 +84,16 @@ nmap j gj
 map <Leader>h :nohl<CR>
 
 vmap <C-c> "*y
-map <C-w> :w<CR>
+map <C-s> :w<CR>
 map <C-q> :q<CR>
 map <C-p> :FZF<CR>
 map <Leader>co ggVG"*y
 map <Leader>bb obyebug<ESC>:w<CR>
-
 map <Leader>h :nohl<CR>
+noremap <silent> <C-S-left> :vertical resize -3<CR>
+noremap <silent> <C-S-right> :vertical resize +3<CR>
+noremap <silent> <C-S-up> :resize +3<CR>
+noremap <silent> <C-S-down> :resize -3<CR>
 
 " nerd-tree
 map <Leader>nt :NERDTree<CR>
