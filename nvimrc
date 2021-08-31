@@ -30,6 +30,8 @@ Plug 'ojroques/nvim-lspfuzzy'
 Plug 'godlygeek/tabular'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'tomtom/tcomment_vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-repeat'
@@ -134,3 +136,6 @@ nnoremap <silent><leader>lg <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent><leader>la <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent><leader>l; <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent><leader>l, <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+
+" airline
+let g:airline_solarized_bg='dark'
