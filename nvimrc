@@ -1,5 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 " UI
+Plug 'miyakogi/conoline.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'iCyMind/NeoSolarized'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
@@ -25,6 +26,7 @@ Plug 'honza/vim-snippets'
 
 " Tools
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-dispatch'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ojroques/nvim-lspfuzzy'
 Plug 'godlygeek/tabular'
@@ -36,6 +38,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'vim-test/vim-test'
 Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
@@ -102,7 +105,7 @@ map <Leader>nf :NERDTreeFind<CR>
 " indentLine
 map <Leader>il :IndentLinesToggle<CR>
 
-" vim-easymition
+" vim-easymotion
 " <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
@@ -116,6 +119,14 @@ map <Leader>gb :Gblame<CR>
 " ack.vim
 map <Leader>F :Ack<Space>
 
+
+" vim-test
+let test#strategy = 'dispatch'
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
 
 
 " fzf
@@ -142,3 +153,8 @@ nnoremap <silent><leader>l, <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
 " airline
 let g:airline_solarized_bg='dark'
+
+" conoline
+let g:conoline_auto_enable = 1
+let g:conoline_use_colorscheme_default_normal = 1
+let g:conoline_use_colorscheme_default_insert = 1
