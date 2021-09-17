@@ -44,6 +44,7 @@ zinit snippet OMZ::plugins/tmuxinator/tmuxinator.plugin.zsh
 alias vim="nvim"
 alias rr="rails routes"
 alias rrg="rails routes | grep"
+alias lzd="lazydocker"
 
 export EDITOR="nvim"
 
@@ -82,7 +83,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
 
 # asdf
 . /opt/homebrew/opt/asdf/asdf.sh

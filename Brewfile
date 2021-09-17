@@ -49,6 +49,7 @@ cask "kap"
 cask "karabiner-elements"
 cask "keka"
 brew "lazygit"
+brew "lazydocker"
 brew "markdown"
 brew "mysql", restart_service: true
 brew "neovim"
