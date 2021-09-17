@@ -44,6 +44,7 @@ zinit snippet OMZ::plugins/tmuxinator/tmuxinator.plugin.zsh
 alias vim="nvim"
 alias rr="rails routes"
 alias rrg="rails routes | grep"
+alias lzg="lazygit"
 alias lzd="lazydocker"
 
 export EDITOR="nvim"
