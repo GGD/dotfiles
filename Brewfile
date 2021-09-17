@@ -1,14 +1,12 @@
 tap "agrinman/tap"
 tap "homebrew/cask-fonts"
 tap "buo/cask-upgrade"
-tap "isacikgoz/gitin"
 tap "jesseduffield/lazydocker"
 tap "neovim/neovim"
 
 cask "1password"
 brew "ack"
 brew "agrinman/tap/tunnelto"
-cask "aldente"
 cask "alfred"
 brew "ansible"
 cask "appcleaner"
@@ -25,18 +23,15 @@ cask "discord"
 brew "docker"
 cask "dockey"
 brew "docker-compose"
-cask "dozer"
 cask "dropbox"
 cask "evernote"
 brew "fd"
 cask "firefox"
-cask "flotato"
 cask "fluid"
 brew "fzf"
 brew "git"
 cask "gitup"
 brew "gh"
-cask "goofy"
 brew "gpg"
 brew "htop-osx"
 brew "httpie"
@@ -60,20 +55,15 @@ brew "overmind"
 brew "pgcli"
 brew "postgresql", restart_service: true
 brew "puma/puma/puma-dev"
-brew "rbenv"
 brew "redis", restart_service: true
 cask "rectangle"
 cask "rescuetime"
-cask "responsively"
 brew "ripgrep"
-brew "ruby-build"
 cask "showyedge"
 cask "slack"
 cask "spotify"
-cask "stats"
 cask "tableplus"
 brew "the_silver_searcher"
-brew "tig"
 brew "tmux"
 brew "tmuxinator"
 cask "toggl-track"
@@ -96,7 +86,6 @@ mas "LINE", id: 539883307
 mas "Manico", id: 724472954
 mas "Noizio", id: 928871589
 mas "Pocket", id: 568494494
-mas "Pushbullet", id: 948415170
 mas "Reeder", id: 1449412482
 mas "Spark", id: 1176895641
 mas "The Unarchiver", id: 425424353
