@@ -93,6 +93,7 @@ map <C-p> :FZF<CR>
 map <Leader>co ggVG"*y
 map <Leader>bb obyebug<ESC>:w<CR>
 map <Leader>h :nohl<CR>
+map <Leader>jq :%! jq .<CR>
 noremap <silent> <C-S-left> :vertical resize -3<CR>
 noremap <silent> <C-S-right> :vertical resize +3<CR>
 noremap <silent> <C-S-up> :resize +3<CR>

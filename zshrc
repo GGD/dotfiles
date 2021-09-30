@@ -54,14 +54,6 @@ export EDITOR="nvim"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
 
-# flutter
-export PATH="$PATH:/Users/gadii/.flutterio/bin"
-
-# android studio
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
 # brew
 eval $(/opt/homebrew/bin/brew shellenv)
 
