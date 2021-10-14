@@ -4,6 +4,7 @@ Plug 'miyakogi/conoline.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'iCyMind/NeoSolarized'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
+Plug 'luochen1990/rainbow'
 Plug 'airblade/vim-gitgutter'
 
 " Search
@@ -73,6 +74,8 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " indentLine setting
 let g:indentLine_enabled = 0
 
+" rainbow setting
+let g:rainbow_active = 1
 
 
 let mapleader = "\<Space>"
