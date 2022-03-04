@@ -17,6 +17,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-ragtag'
 Plug 'slim-template/vim-slim'
+Plug 'hashivim/vim-terraform'
 
 " Snippet
 Plug 'mattn/emmet-vim'
