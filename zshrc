@@ -78,4 +78,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # asdf
-. /opt/homebrew/opt/asdf/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
