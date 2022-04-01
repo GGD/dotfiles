@@ -3,7 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'miyakogi/conoline.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'iCyMind/NeoSolarized'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
+Plug 'scrooloose/nerdtree'
 Plug 'luochen1990/rainbow'
 Plug 'airblade/vim-gitgutter'
 
