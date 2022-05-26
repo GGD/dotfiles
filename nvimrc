@@ -28,6 +28,7 @@ Plug 'honza/vim-snippets'
 
 " Tools
 Plug 'jiangmiao/auto-pairs'
+Plug 'kdheepak/lazygit.nvim'
 Plug 'tpope/vim-dispatch'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ojroques/nvim-lspfuzzy'
@@ -89,6 +90,7 @@ nmap k gk
 nmap j gj
 
 map <Leader>h :nohl<CR>
+nnoremap <silent> <leader>gg :LazyGit<CR>
 
 vmap <C-c> "*y
 map <C-s> :w<CR>
