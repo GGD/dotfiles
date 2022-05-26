@@ -79,3 +79,5 @@ unset __conda_setup
 
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+eval $(thefuck --alias)
