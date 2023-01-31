@@ -41,13 +41,14 @@ zinit snippet OMZ::plugins/tmuxinator/tmuxinator.plugin.zsh
 ### End of Zinit's installer chunk
 
 # alias
-alias vim="nvim"
+alias vim="lvim"
 alias rr="rails routes"
 alias rrg="rails routes | grep"
 alias lzg="lazygit"
 alias lzd="lazydocker"
 
-export EDITOR="nvim"
+export EDITOR="lvim"
+export PATH=/Users/gadii/.local/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -2,16 +2,18 @@
   "dependencies": {
     "@vitejs/create-app": "^2.2.5",
     "@vue/cli": "^4.5.13",
-    "create-next-app": "^9.4.4",
+    "create-next-app": "^12.2.2",
     "create-nuxt-app": "^3.6.0",
     "eslint": "^6.0.1",
     "gulp": "^4.0.2",
+    "neovim": "^4.10.1",
     "parcel-bundler": "^1.4.1",
     "pm2": "^2.6.1",
     "prettier": "^1.5.3",
     "react-native-cli": "^2.0.1",
     "shipit-cli": "^3.0.0",
     "shipit-deploy": "^2.5.1",
-    "slack-keep-presence": "^1.0.9"
+    "slack-keep-presence": "^1.0.9",
+    "tree-sitter-cli": "^0.20.6"
   }
 }

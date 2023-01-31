@@ -28,6 +28,7 @@ Plug 'honza/vim-snippets'
 
 " Tools
 Plug 'jiangmiao/auto-pairs'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kdheepak/lazygit.nvim'
 Plug 'tpope/vim-dispatch'
 Plug 'neovim/nvim-lspconfig'
@@ -37,6 +38,7 @@ Plug 'AndrewRadev/tagalong.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-fugitive'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-repeat'
@@ -121,7 +123,7 @@ map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " fugitive.vim
-map <Leader>gb :Gblame<CR>
+map <Leader>gb :Git blame<CR>
 
 " ack.vim
 map <Leader>F :Ack<Space>
@@ -157,6 +159,12 @@ nnoremap <silent><leader>lg <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent><leader>la <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent><leader>l; <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent><leader>l, <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+
+" vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " airline
 let g:airline_solarized_bg='dark'
