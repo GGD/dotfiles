@@ -1,9 +1,7 @@
-[init]
-	templatedir = ~/.git_template
 [color]
 	ui = true
 [user]
-	name = GaDii Jian
+	name = GaDii
 	email = ggd747@gmail.com
 [alias]
 	ck = checkout
