@@ -14,7 +14,7 @@ vim.opt.wrap = true -- wrap lines
 lvim.colorscheme = "onedark"
 
 lvim.plugins = {
-  { "lunarvim/colorschemes" },
+  { "navarasu/onedark.nvim" },
   {
     "phaazon/hop.nvim",
     event = "BufRead",

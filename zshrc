@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 ### zsh-autocomplete
-source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -44,13 +44,18 @@ zinit snippet OMZ::plugins/tmuxinator/tmuxinator.plugin.zsh
 ### End of Zinit's installer chunk
 
 # alias
-alias vim="lvim"
+alias vim="nvim"
 alias rr="rails routes"
 alias rrg="rails routes | grep"
 alias lzg="lazygit"
 alias lzd="lazydocker"
+alias os="overmind s"
+alias oc="overmind c"
+alias gdb="git branch | grep -v 'main' | grep -v 'release' | grep -v 'develop' | xargs git branch -D"
+alias ls='eza -lh --group-directories-first --icons --hyperlink'
+alias lt='eza --tree --level=2 --long --icons --git'
 
-export EDITOR="lvim"
+export EDITOR="vim"
 export PATH=/Users/gadii/.local/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -78,3 +83,6 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# Added by Windsurf
+export PATH="/Users/gadii/.codeium/windsurf/bin:$PATH"
