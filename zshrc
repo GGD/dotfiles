@@ -1,14 +1,13 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+# ====================
+# p10k instant prompt (must stay at the top)
+# ====================
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-### zsh-autocomplete
-# source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
-### Added by Zinit's installer
+# ====================
+# zinit
+# ====================
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
     command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
@@ -21,13 +20,14 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-
+# plugins
 zinit light zdharma/fast-syntax-highlighting
 zinit light romkatv/powerlevel10k
 zinit light rupa/z
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
+# oh-my-zsh snippets
 zinit snippet OMZ::lib/clipboard.zsh
 zinit snippet OMZ::lib/completion.zsh
 zinit snippet OMZ::lib/directories.zsh
@@ -41,9 +41,23 @@ zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/heroku/heroku.plugin.zsh
 zinit snippet OMZ::plugins/rails/rails.plugin.zsh
 zinit snippet OMZ::plugins/tmuxinator/tmuxinator.plugin.zsh
-### End of Zinit's installer chunk
 
-# alias
+# annexes
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+# ====================
+# completion
+# ====================
+autoload -Uz compinit
+compinit
+
+# ====================
+# aliases
+# ====================
 alias vim="nvim"
 alias rr="rails routes"
 alias rrg="rails routes | grep"
@@ -51,38 +65,48 @@ alias lzg="lazygit"
 alias lzd="lazydocker"
 alias os="overmind s"
 alias oc="overmind c"
+alias zj="zellij"
 alias gdb="git branch | grep -v 'main' | grep -v 'release' | grep -v 'develop' | xargs git branch -D"
 alias ls='eza -lh --group-directories-first --icons --hyperlink'
 alias lt='eza --tree --level=2 --long --icons --git'
 
+# ====================
+# exports
+# ====================
 export EDITOR="vim"
-export PATH=/Users/gadii/.local/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
+export OVERMIND_PROCFILE=Procfile.dev
+export CHROME_DRIVER_PATH=/opt/homebrew/bin/chromedriver
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+# ====================
+# keybindings
+# ====================
+bindkey '^U' backward-kill-line
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
 
+# ====================
+# tools
+# ====================
 # brew
 eval $(/opt/homebrew/bin/brew shellenv)
+
+# p10k
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # fzf
 export FZF_BASE=/opt/homebrew/bin/fzf
 source <(fzf --zsh)
 
-# asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
-
-### End of Zinit's installer chunk
+# zsh-history-substring-search
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# Added by Windsurf
-export PATH="/Users/gadii/.codeium/windsurf/bin:$PATH"
+# mise
+eval "$(mise activate zsh)"
+export PATH="$(mise where node)/bin:$PATH"
+export PATH="$(mise where uv)/bin:$PATH"
+
+# ====================
+# custom scripts
+# ====================
+source "$HOME/.dotfiles/scripts/git-worktree.sh"

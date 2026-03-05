@@ -28,3 +28,5 @@
 	autoStash = true
 [pull]
 	rebase = preserve
+[push]
+	autoSetupRemote = true
